@@ -1,0 +1,43 @@
+<div class="mat-container">
+  <h1>This is list of all registered vehicles</h1>
+<mat-table #table [dataSource]="listOfAllVehicles" >
+
+<ng-container matColumnDef="vehicleType">
+  <mat-header-cell *matHeaderCellDef>Vehicle Type</mat-header-cell>
+  <mat-cell *matCellDef="let element">{{element.vehicleType}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="brand">
+  <mat-header-cell *matHeaderCellDef>Brand</mat-header-cell>
+  <mat-cell *matCellDef="let element">{{element.brand}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="model">
+  <mat-header-cell *matHeaderCellDef>Model</mat-header-cell>
+  <mat-cell *matCellDef="let element">{{element.model}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="productionDate">
+  <mat-header-cell *matHeaderCellDef>Production Date</mat-header-cell>
+  <mat-cell *matCellDef="let element">{{element.productionDate}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="mileage">
+  <mat-header-cell *matHeaderCellDef>Mileage in km</mat-header-cell>
+  <mat-cell *matCellDef="let element">{{element.mileage}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="registrationNumber">
+  <mat-header-cell *matHeaderCellDef>Registration Number</mat-header-cell>
+  <mat-cell *matCellDef="let element">{{element.registrationNumber}}</mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="vinNumber">
+  <mat-header-cell *matHeaderCellDef>Vin Number</mat-header-cell>
+  <mat-cell *matCellDef="let element">{{element.vinNumber}}</mat-cell>
+</ng-container>
+
+<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+</div>
